@@ -1,0 +1,981 @@
+@media (max-width: 1280px) {
+  .admin-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .admin-side {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .users-table-head,
+  .user-row {
+    grid-template-columns: minmax(165px, 1.2fr) 122px minmax(125px, 0.9fr) 76px 70px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .chat-history {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    width: 292px;
+    height: 100dvh;
+    border-right-color: var(--border-strong);
+    background: #081422;
+    box-shadow: 40px 0 90px -50px rgba(0, 0, 0, 0.95);
+    transform: translateX(-102%);
+    transition: transform 230ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .chat-history.mobile-open {
+    transform: translateX(0);
+  }
+
+  .chat-history-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: rgba(2, 7, 12, 0.65);
+    backdrop-filter: blur(4px);
+    cursor: default;
+  }
+
+  .chat-menu-button {
+    display: inline-flex;
+  }
+
+  .mobile-history-close {
+    display: inline-flex;
+  }
+
+  .new-chat-icon {
+    display: none;
+  }
+
+  .profile-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .profile-side .session-card {
+    grid-column: span 2;
+  }
+
+  .generate-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .generate-aside {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .generate-aside .last-document {
+    grid-column: 1 / -1;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1001px) and (max-height: 860px) {
+  .login-hero {
+    padding-top: 28px;
+  }
+
+  .login-hero-content {
+    padding-top: 20px;
+  }
+
+  .login-pill {
+    margin-bottom: 16px;
+  }
+
+  .login-hero h1 {
+    font-size: clamp(44px, 4.7vw, 60px);
+  }
+
+  .login-subtitle {
+    margin-top: 15px;
+  }
+
+  .login-features {
+    margin-top: 20px;
+  }
+
+  .login-doc-stack {
+    display: none;
+  }
+
+  .login-panel {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .login-card {
+    padding: 27px;
+  }
+
+  .login-help {
+    margin-top: 12px;
+  }
+
+  .login-version {
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 26px;
+  }
+
+  .login-grid {
+    opacity: 0.3;
+    mask-image: none;
+  }
+
+  .login-hero {
+    display: none;
+  }
+
+  .login-panel {
+    width: 100%;
+    max-width: 440px;
+    padding: 0;
+    border-left: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 31px;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.022), transparent 40%),
+      rgba(11, 24, 38, 0.94);
+    backdrop-filter: blur(18px);
+  }
+
+  .login-mobile-brand {
+    display: block;
+    margin-bottom: 26px;
+  }
+
+  .login-help {
+    width: 100%;
+    max-width: none;
+  }
+
+  .login-version {
+    text-align: center;
+  }
+}
+
+@media (max-width: 980px) {
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-topbar,
+  .mobile-nav {
+    display: flex;
+  }
+
+  .app-shell {
+    height: 100dvh;
+  }
+
+  .app-main {
+    overscroll-behavior-y: contain;
+  }
+
+  .page {
+    padding: 28px 24px 58px;
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(29px, 5vw, 38px);
+  }
+
+  .page-header-actions {
+    padding-bottom: 0;
+  }
+
+  .chat-page {
+    height: 100%;
+  }
+
+  .chat-header {
+    padding: 10px 17px;
+  }
+
+  .chat-thread {
+    padding: 24px 18px 20px;
+  }
+
+  .composer-zone {
+    padding: 9px 15px 10px;
+  }
+
+  .admin-side {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .users-table-head {
+    display: none;
+  }
+
+  .user-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'identity role'
+      'usage status'
+      'actions actions';
+    gap: 7px 12px;
+    padding: 13px 10px;
+  }
+
+  .user-identity {
+    grid-area: identity;
+  }
+
+  .user-role-cell {
+    grid-area: role;
+    align-items: flex-end;
+  }
+
+  .user-usage-cell {
+    grid-area: usage;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .user-row > div:nth-child(4) {
+    grid-area: status;
+    justify-self: end;
+  }
+
+  .user-actions {
+    grid-area: actions;
+    justify-content: flex-end;
+    padding-top: 5px;
+    border-top: 1px solid rgba(151, 184, 210, 0.06);
+  }
+}
+
+@media (max-width: 820px) {
+  .page-header {
+    display: block;
+  }
+
+  .page-header-actions {
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .generate-header-actions {
+    flex-wrap: wrap;
+  }
+
+  .upload-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .upload-fields {
+    padding: 0 3px 3px;
+  }
+
+  .dropzone {
+    min-height: 175px;
+  }
+
+  .library-toolbar {
+    display: block;
+  }
+
+  .library-controls {
+    justify-content: flex-start;
+    margin-top: 13px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .document-main {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .document-side {
+    display: none;
+  }
+
+  .admin-side {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .admin-layout {
+    gap: 13px;
+  }
+
+  .profile-side {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile-side .session-card {
+    grid-column: auto;
+  }
+
+  .detail-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .modal-head {
+    padding: 20px 20px 14px;
+  }
+
+  .modal-body {
+    padding: 18px 20px;
+  }
+
+  .modal-footer {
+    padding: 13px 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 23px 17px 48px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(27px, 7vw, 34px);
+  }
+
+  .page-lead {
+    font-size: 11.8px;
+  }
+
+  .eyebrow {
+    font-size: 8.5px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-note {
+    display: none;
+  }
+
+  .stats-row {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .stat-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 7px;
+  }
+
+  .stat-hint {
+    font-size: 7.5px;
+  }
+
+  .format-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .format-option {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .format-check {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .generate-form-card {
+    padding: 19px 16px;
+  }
+
+  .generate-form {
+    gap: 19px;
+  }
+
+  .form-step {
+    padding-bottom: 19px;
+  }
+
+  .depth-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .depth-option {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .generate-aside {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .generate-aside .last-document {
+    grid-column: auto;
+  }
+
+  .generate-submit-row {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .btn-generate {
+    width: 100%;
+  }
+
+  .generate-trust {
+    justify-content: center;
+  }
+
+  .recent-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recent-loading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .upload-card {
+    padding: 13px;
+  }
+
+  .upload-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .upload-actions p {
+    max-width: none;
+  }
+
+  .upload-actions .btn {
+    width: 100%;
+  }
+
+  .document-row {
+    align-items: flex-start;
+  }
+
+  .document-main {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .document-title-line {
+    align-items: flex-start;
+  }
+
+  .document-title-line strong {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .document-copy > p {
+    -webkit-line-clamp: 2;
+  }
+
+  .document-delete {
+    opacity: 1;
+    width: 34px;
+    margin: 7px 5px 7px 0;
+  }
+
+  .document-meta {
+    gap: 4px;
+  }
+
+  .library-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-pills {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .filter-pills button {
+    flex: 1;
+  }
+
+  .field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .users-card {
+    padding: 15px;
+  }
+
+  .card-heading {
+    flex-wrap: wrap;
+  }
+
+  .account-slots {
+    white-space: normal;
+  }
+
+  .user-row {
+    padding: 12px 7px;
+  }
+
+  .admin-summary-grid {
+    gap: 7px;
+  }
+
+  .mini-stat {
+    padding: 11px;
+  }
+
+  .mini-stat strong {
+    font-size: 17px;
+  }
+
+  .profile-hero {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .profile-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    font-size: 17px;
+  }
+
+  .profile-identity {
+    flex: 1;
+  }
+
+  .profile-name-row h2 {
+    font-size: 20px;
+  }
+
+  .profile-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .profile-hero-orb {
+    display: none;
+  }
+
+  .profile-usage,
+  .password-card {
+    padding: 17px;
+  }
+
+  .profile-limit-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .password-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .password-form-footer .btn {
+    width: 100%;
+  }
+
+  .recent-section {
+    margin-top: 25px;
+  }
+
+  .chat-header .btn-compact {
+    display: none;
+  }
+
+  .chat-thread {
+    padding: 20px 14px 16px;
+  }
+
+  .chat-welcome {
+    padding-top: 7px;
+  }
+
+  .chat-welcome h1 {
+    font-size: 32px;
+  }
+
+  .welcome-lead {
+    font-size: 11.5px;
+  }
+
+  .welcome-orbit {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 15px;
+  }
+
+  .welcome-mark {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+
+  .suggestion-grid {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 21px;
+  }
+
+  .welcome-note {
+    margin-top: 15px;
+  }
+
+  .message-list {
+    gap: 21px;
+  }
+
+  .message-body {
+    max-width: calc(100% - 40px);
+  }
+
+  .message-user .message-body {
+    max-width: 87%;
+  }
+
+  .message-bubble {
+    padding: 12px 14px;
+    font-size: 11.8px;
+  }
+
+  .message-avatar {
+    width: 27px;
+    height: 27px;
+    font-size: 9px;
+  }
+
+  .message-avatar.assistant-avatar {
+    font-size: 13px;
+  }
+
+  .composer-zone {
+    padding: 8px 11px 8px;
+  }
+
+  .composer {
+    padding: 10px 11px 7px;
+    border-radius: 15px;
+  }
+
+  .composer-top textarea {
+    font-size: 12px;
+  }
+
+  .composer-tool span {
+    display: none;
+  }
+
+  .composer-tool {
+    padding: 6px;
+  }
+
+  .composer-hint {
+    display: none;
+  }
+
+  .quota-limit-note {
+    font-size: 8.5px;
+  }
+
+  .login-page {
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .login-panel {
+    max-width: none;
+    justify-content: center;
+    padding: 24px 17px;
+  }
+
+  .login-card {
+    padding: 25px 21px;
+    border-radius: 19px;
+  }
+
+  .login-mobile-brand {
+    margin-bottom: 22px;
+  }
+
+  .login-heading h2 {
+    font-size: 25px;
+  }
+
+  .notfound-page {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 20px 13px 40px;
+  }
+
+  .page-header-actions {
+    gap: 6px;
+  }
+
+  .page-header-actions .btn,
+  .library-header-actions .btn {
+    flex: 1;
+  }
+
+  .page-header-actions .btn:only-child,
+  .library-header-actions .btn:only-child {
+    flex: 0 1 auto;
+  }
+
+  .library-header-actions,
+  .generate-header-actions {
+    width: 100%;
+  }
+
+  .zero-token-pill {
+    flex: 0 0 auto;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-icon {
+    display: none;
+  }
+
+  .admin-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mini-stat {
+    align-items: center;
+  }
+
+  .profile-hero {
+    gap: 12px;
+  }
+
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .profile-name-row h2 {
+    font-size: 18px;
+  }
+
+  .role-badge {
+    font-size: 7px;
+  }
+
+  .detail-summary {
+    flex-direction: column;
+  }
+
+  .detail-stats {
+    gap: 6px;
+  }
+
+  .modal-backdrop {
+    padding: 9px;
+  }
+
+  .modal-panel {
+    max-height: 93dvh;
+    border-radius: 18px;
+  }
+
+  .modal-head h2 {
+    font-size: 19px;
+  }
+
+  .modal-footer .btn {
+    flex: 1;
+  }
+
+  .modal-footer > :first-child:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .password-generate-row {
+    flex-direction: column;
+  }
+
+  .password-generate-row .btn {
+    width: 100%;
+  }
+
+  .chat-history {
+    width: min(88vw, 300px);
+  }
+
+  .chat-header-actions {
+    gap: 5px;
+  }
+
+  .chat-header {
+    padding: 9px 13px;
+  }
+
+  .chat-assistant-info span {
+    font-size: 8px;
+  }
+
+  .composer-tools {
+    gap: 1px;
+  }
+
+  .char-count {
+    display: none;
+  }
+
+  .quota-limit-note a {
+    margin-left: 0;
+  }
+
+  .login-help {
+    margin-top: 14px;
+  }
+
+  .login-version {
+    font-size: 7.5px;
+  }
+
+  .auth-submit {
+    font-size: 12px;
+  }
+
+  .generate-form-card {
+    padding: 16px 13px;
+  }
+
+  .doc-preview-card {
+    padding: 9px;
+  }
+
+  .preview-paper {
+    padding: 18px;
+  }
+
+  .preview-title {
+    font-size: 20px;
+  }
+
+  .recent-card {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .format-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .depth-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .login-card {
+    padding: 22px 17px;
+  }
+
+  .login-heading h2 {
+    font-size: 23px;
+  }
+
+  .mobile-nav-link {
+    font-size: 7.5px;
+  }
+
+  .message-user .message-body {
+    max-width: 91%;
+  }
+
+  .document-copy > p {
+    display: none;
+  }
+
+  .tag-row {
+    margin-top: 5px;
+  }
+
+  .filter-pills button {
+    padding: 5px 5px;
+  }
+}
